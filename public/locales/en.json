@@ -53,7 +53,7 @@
     { "name": "Tafaol Center", "url": "https://tafaolcenter.org/", "description": "Official website for an educational, developmental, and consulting center." },
     { "name": "Swaeeds", "url": "https://swaeeds.com", "description": "An online platform connecting users with a wide range of local services and businesses." },
     { "name": "Moalime", "url": "https://moalime.com/", "description": "An online educational platform connecting students with qualified teachers for various subjects." },
-    { "name": "Makani Homes", "url": "https://makanihomes.com/", "description": "A real estate platform for property listings, sales, and rentals in the UAE.", "coverImageUrl": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=2070&auto=format&fit=crop" },
+    { "name": "Makani Homes", "url": "https://makanihomes.com/", "description": "A real estate platform for property listings, sales, and rentals in the UAE.", "coverImageUrl": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { "name": "Multivendor E-commerce", "url": "https://personal-multivendor.netlify.app/", "description": "A versatile multi-vendor e-commerce marketplace template with modern features." },
     { "name": "Elite Bazaar", "url": "https://3lbazaar.com/elite/", "description": "A luxurious e-commerce platform for high-end fashion, accessories, and lifestyle products." }
   ],
@@ -83,7 +83,7 @@
         { "title": "Business Discovery", "description": "Understand your business model, target users, and the problems the app should solve." },
         { "title": "UX Research & Design", "description": "Design wireframes and interactive prototypes to map user journeys for simplicity and clarity." },
         { "title": "Flutter App Development", "description": "Build the app using Flutter and Dart for high performance, rapid development, and consistency." },
-        { "title": "API & System Integration", "description": "Connect the app with existing systems like CRMs, e-commerce backends, and payment gateways." },
+        { "title": "API & System Integration", "description": "Connect your app with existing systems like CRMs, e-commerce backends, and payment gateways." },
         { "title": "Deployment & Maintenance", "description": "Handle publishing to the App Store and Google Play, and set up CI/CD pipelines." }
       ],
       "capabilities": ["Cross-Platform Development", "AI-Enhanced Features", "Payment & E-Commerce Systems", "Offline Mode & Data Sync", "Custom Admin Dashboards"],
@@ -110,16 +110,16 @@
       "title": "System & UI/UX Design",
       "imageUrl": "https://res.cloudinary.com/dkrnem01r/image/upload/v1761326334/Gemini_Generated_Image_kibm56kibm56kibm_txoy3a.png",
       "description": "Designing systems and interfaces that turn complexity into clarity and work beautifully.",
-  "longDescription": "Our approach connects technical structure with human experience, ensuring every process, screen, and interaction is functional, intuitive, and aligned with your business goals. We merge creativity with logic to deliver flawless digital experiences.",
-  "process": [
-    { "title": "Research & Discovery", "description": "Analyze users, business objectives, and workflow pain points to understand what users truly need." },
-    { "title": "Information Architecture", "description": "Structure your system into logical flows and hierarchies for easy navigation." },
-    { "title": "Wireframing & Prototyping", "description": "Design low- and high-fidelity prototypes to visualize the system and refine usability." },
-    { "title": "UI Design & Branding Alignment", "description": "Craft aesthetic and purposeful visual interfaces that reflect your brand identity." },
-    { "title": "Usability Testing & Refinement", "description": "Test with real users to observe behavior and iterate until the interface feels effortless." }
-  ],
-  "capabilities": ["System Architecture Design", "User Interface (UI) Design", "User Experience (UX) Strategy", "Interactive Prototypes", "Design Systems & Style Guides"],
-  "technologies": ["Figma / Adobe XD", "Miro / Whimsical", "Zeplin / Avocode", "Notion / Jira", "Hotjar / Google Analytics"]
+      "longDescription": "Our approach connects technical structure with human experience, ensuring every process, screen, and interaction is functional, intuitive, and aligned with your business goals. We merge creativity with logic to deliver flawless digital experiences.",
+      "process": [
+        { "title": "Research & Discovery", "description": "Analyze users, business objectives, and workflow pain points to understand what users truly need." },
+        { "title": "Information Architecture", "description": "Structure your system into logical flows and hierarchies for easy navigation." },
+        { "title": "Wireframing & Prototyping", "description": "Design low- and high-fidelity prototypes to visualize the system and refine usability." },
+        { "title": "UI Design & Branding Alignment", "description": "Craft aesthetic and purposeful visual interfaces that reflect your brand identity." },
+        { "title": "Usability Testing & Refinement", "description": "Test with real users to observe behavior and iterate until the interface feels effortless." }
+      ],
+      "capabilities": ["System Architecture Design", "User Interface (UI) Design", "User Experience (UX) Strategy", "Interactive Prototypes", "Design Systems & Style Guides"],
+      "technologies": ["Figma / Adobe XD", "Miro / Whimsical", "Zeplin / Avocode", "Notion / Jira", "Hotjar / Google Analytics"]
     },
     {
       "id": "devops",

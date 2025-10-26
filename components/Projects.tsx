@@ -39,40 +39,61 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
         </a>
       </div>
       <div className="w-full h-80 bg-primary overflow-hidden relative group">
-        {/* Loading indicator */}
-        {!iframeLoaded && !iframeError && (
-          <div className="w-full h-full bg-gradient-to-br from-gray-900 via-primary to-gray-900 flex items-center justify-center absolute top-0 left-0 z-10">
-            <div className="flex flex-col items-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent mb-4"></div>
-              <p className="text-gray-400 text-sm">Loading preview...</p>
+        {project.coverImageUrl ? (
+          // Show cover image if available
+          <div className="w-full h-full group-hover:scale-110 transition-transform duration-500 ease-in-out">
+            <img
+              src={project.coverImageUrl}
+              alt={project.name}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            {/* Overlay for interaction */}
+            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <a href={project.url} target="_blank" rel="noopener noreferrer" className="bg-accent text-white px-6 py-3 rounded-full font-semibold hover:bg-accent/90 transition-colors">
+                View Live Site
+              </a>
             </div>
           </div>
-        )}
-        
-        {/* Iframe */}
-        <iframe
-          src={project.url}
-          title={project.name}
-          className="w-full h-full border-0 transition-transform duration-300 group-hover:scale-105"
-          loading="lazy"
-          sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"
-          referrerPolicy="no-referrer-when-downgrade"
-          onLoad={handleIframeLoad}
-          onError={handleIframeError}
-          style={{ display: iframeError ? 'none' : 'block' }}
-        />
-        
-        {/* Error fallback */}
-        {iframeError && (
-          <div className="w-full h-full bg-gradient-to-br from-gray-900 via-primary to-gray-900 flex items-center justify-center p-6 text-center absolute top-0 left-0">
-            <a href={project.url} target="_blank" rel="noopener noreferrer" className="w-full h-full flex items-center justify-center rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary">
-              <div className="transition-transform duration-300 group-hover:scale-105">
-                <svg className="w-16 h-16 mx-auto text-accent mb-4 opacity-75" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-                <h4 className="text-2xl font-bold text-light">{project.name}</h4>
-                <p className="text-gray-400 text-sm mt-2">Click to visit site</p>
+        ) : (
+          // Fallback to iframe for projects without cover images
+          <>
+            {/* Loading indicator */}
+            {!iframeLoaded && !iframeError && (
+              <div className="w-full h-full bg-gradient-to-br from-gray-900 via-primary to-gray-900 flex items-center justify-center absolute top-0 left-0 z-10">
+                <div className="flex flex-col items-center">
+                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent mb-4"></div>
+                  <p className="text-gray-400 text-sm">Loading preview...</p>
+                </div>
               </div>
-            </a>
-          </div>
+            )}
+            
+            {/* Iframe */}
+            <iframe
+              src={project.url}
+              title={project.name}
+              className="w-full h-full border-0 transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+              sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"
+              referrerPolicy="no-referrer-when-downgrade"
+              onLoad={handleIframeLoad}
+              onError={handleIframeError}
+              style={{ display: iframeError ? 'none' : 'block' }}
+            />
+            
+            {/* Error fallback */}
+            {iframeError && (
+              <div className="w-full h-full bg-gradient-to-br from-gray-900 via-primary to-gray-900 flex items-center justify-center p-6 text-center absolute top-0 left-0">
+                <a href={project.url} target="_blank" rel="noopener noreferrer" className="w-full h-full flex items-center justify-center rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary">
+                  <div className="transition-transform duration-300 group-hover:scale-105">
+                    <svg className="w-16 h-16 mx-auto text-accent mb-4 opacity-75" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                    <h4 className="text-2xl font-bold text-light">{project.name}</h4>
+                    <p className="text-gray-400 text-sm mt-2">Click to visit site</p>
+                  </div>
+                </a>
+              </div>
+            )}
+          </>
         )}
       </div>
       <div className="p-4 bg-primary/30 mt-auto">
