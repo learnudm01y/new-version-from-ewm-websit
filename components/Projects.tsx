@@ -3,7 +3,20 @@ import { useLanguage } from '../context/LanguageContext.tsx';
 import type { Project } from '../types.ts';
 
 const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, index }) => {
+  const [iframeLoaded, setIframeLoaded] = useState(false);
+  const [iframeError, setIframeError] = useState(false);
+  
   const cardClasses = "bg-glass backdrop-blur-xl border border-white/10 rounded-2xl shadow-glass overflow-hidden animate-fade-in-up transition-all duration-300 hover:shadow-accent/20 hover:-translate-y-2 flex flex-col group";
+
+  const handleIframeLoad = () => {
+    setIframeLoaded(true);
+    setIframeError(false);
+  };
+
+  const handleIframeError = () => {
+    setIframeError(true);
+    setIframeLoaded(false);
+  };
 
   return (
     <div className={cardClasses} style={{ animationDelay: `${index * 0.1}s` }}>
@@ -25,22 +38,38 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
           </svg>
         </a>
       </div>
-      <div className="w-full h-80 bg-primary overflow-hidden">
-        {project.coverImageUrl ? (
-          <div className="w-full h-full group-hover:scale-110 transition-transform duration-500 ease-in-out">
-            <img
-              src={project.coverImageUrl}
-              alt={project.name}
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
+      <div className="w-full h-80 bg-primary overflow-hidden relative group">
+        {/* Loading indicator */}
+        {!iframeLoaded && !iframeError && (
+          <div className="w-full h-full bg-gradient-to-br from-gray-900 via-primary to-gray-900 flex items-center justify-center absolute top-0 left-0 z-10">
+            <div className="flex flex-col items-center">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent mb-4"></div>
+              <p className="text-gray-400 text-sm">Loading preview...</p>
+            </div>
           </div>
-        ) : (
-          <div className="w-full h-full bg-gradient-to-br from-gray-900 via-primary to-gray-900 flex items-center justify-center p-6 text-center">
+        )}
+        
+        {/* Iframe */}
+        <iframe
+          src={project.url}
+          title={project.name}
+          className="w-full h-full border-0 transition-transform duration-300 group-hover:scale-105"
+          loading="lazy"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation-by-user-activation"
+          referrerPolicy="no-referrer-when-downgrade"
+          onLoad={handleIframeLoad}
+          onError={handleIframeError}
+          style={{ display: iframeError ? 'none' : 'block' }}
+        />
+        
+        {/* Error fallback */}
+        {iframeError && (
+          <div className="w-full h-full bg-gradient-to-br from-gray-900 via-primary to-gray-900 flex items-center justify-center p-6 text-center absolute top-0 left-0">
             <a href={project.url} target="_blank" rel="noopener noreferrer" className="w-full h-full flex items-center justify-center rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary">
               <div className="transition-transform duration-300 group-hover:scale-105">
                 <svg className="w-16 h-16 mx-auto text-accent mb-4 opacity-75" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
                 <h4 className="text-2xl font-bold text-light">{project.name}</h4>
+                <p className="text-gray-400 text-sm mt-2">Click to visit site</p>
               </div>
             </a>
           </div>
