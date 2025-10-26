@@ -109,11 +109,12 @@ export const MobileWork: React.FC<MobileWorkProps> = ({ projects }) => {
     };
     
     return (
-        <button
-            onClick={handleClick}
-            className={`absolute top-1/2 -translate-y-1/2 z-40 bg-white/10 p-2 sm:p-3 rounded-full hover:bg-accent transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-accent ${isPrev ? 'left-0 sm:left-4' : 'right-0 sm:right-4'}`}
-            aria-label={isPrev ? 'Previous Project' : 'Next Project'}
-        >
+    <button
+      onClick={handleClick}
+      // On small screens place arrows below the images; on >=sm keep them vertically centered
+      className={`absolute bottom-6 sm:top-1/2 sm:-translate-y-1/2 z-40 bg-white/10 p-2 sm:p-3 rounded-full hover:bg-accent transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-accent ${isPrev ? 'left-4 sm:left-4' : 'right-4 sm:right-4'}`}
+      aria-label={isPrev ? 'Previous Project' : 'Next Project'}
+    >
             {isPrev ? <ChevronLeftIcon className="w-6 h-6 sm:w-8 sm:h-8 text-white" /> : <ChevronRightIcon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />}
         </button>
     );
