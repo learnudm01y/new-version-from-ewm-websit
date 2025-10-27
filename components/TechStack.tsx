@@ -8,7 +8,7 @@ const CategoryCard: React.FC<{ category: TechnologyCategory; index: number }> = 
   const { translations } = useLanguage();
 
   return (
-    <div 
+    <div
       className="bg-glass backdrop-blur-xl border border-white/10 rounded-2xl p-6 transition-all duration-300 hover:border-accent hover:shadow-2xl hover:shadow-accent/20 hover:scale-105 animate-fade-in-up"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
@@ -17,8 +17,8 @@ const CategoryCard: React.FC<{ category: TechnologyCategory; index: number }> = 
       </h3>
       <div className="grid grid-cols-3 gap-x-4 gap-y-6">
         {category.technologies.map((tech) => (
-          <div 
-            key={tech.name} 
+          <div
+            key={tech.name}
             className="flex flex-col items-center justify-center text-center group"
           >
             <div className="mb-2 text-gray-300 transition-colors duration-300 group-hover:text-white">{tech.icon}</div>
@@ -26,6 +26,12 @@ const CategoryCard: React.FC<{ category: TechnologyCategory; index: number }> = 
           </div>
         ))}
       </div>
+      {category.models && category.models.length > 0 && (
+        <div className="mt-4 pt-4 border-t border-white/5 text-sm text-gray-300">
+          <span className="font-semibold text-gray-200">{translations.ai_models_label}</span>
+          <div className="mt-1 text-xs text-gray-400">{category.models.join(', ')}</div>
+        </div>
+      )}
     </div>
   );
 };

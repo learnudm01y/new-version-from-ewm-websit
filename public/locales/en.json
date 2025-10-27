@@ -39,23 +39,81 @@
   "tech_category_backend": "Backend",
   "tech_category_database": "Databases",
   "tech_category_ai_automation": "AI & Automation",
+  "ai_models_label": "Supported models:",
   "tech_category_devops_cloud": "DevOps & Cloud",
   "tech_category_design_tools": "Design & Tools",
   "projects": [
-    { "name": "Waiter.sa", "url": "https://waiter.sa", "description": "A premier online food ordering and delivery platform based in Saudi Arabia." },
-    { "name": "Balusha Team", "url": "https://balushateam.com/", "description": "Corporate website for a leading contracting and construction services company." },
-    { "name": "Tamouh.ai", "url": "https://tamouh.ai/", "description": "An AI-powered platform providing advanced tools for businesses and individuals." },
-    { "name": "Hlayisani Group", "url": "https://hlayisani.com", "description": "Professional corporate website for a prominent investment holding company." },
-    { "name": "Boulevard Super App", "url": "https://boulevardsuperapp.com/", "description": "A multi-service platform offering lifestyle, convenience, and entertainment services." },
-    { "name": "Soft Collection", "url": "https://softcollection.co.uk/", "description": "Elegant e-commerce platform for a UK-based luxury home textile brand." },
-    { "name": "Tusk Photo", "url": "https://www.tuskphoto.com/", "description": "A visually stunning portfolio website for a professional photography service." },
-    { "name": "Palestinian Causes", "url": "https://www.palestiniancauses.com/", "description": "An informational hub dedicated to raising awareness for various social causes." },
-    { "name": "Tafaol Center", "url": "https://tafaolcenter.org/", "description": "Official website for an educational, developmental, and consulting center." },
-    { "name": "Swaeeds", "url": "https://swaeeds.com", "description": "An online platform connecting users with a wide range of local services and businesses." },
-    { "name": "Moalime", "url": "https://moalime.com/", "description": "An online educational platform connecting students with qualified teachers for various subjects." },
-    { "name": "Makani Homes", "url": "https://makanihomes.com/", "description": "A real estate platform for property listings, sales, and rentals in the UAE.", "coverImageUrl": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
-    { "name": "Multivendor E-commerce", "url": "https://personal-multivendor.netlify.app/", "description": "A versatile multi-vendor e-commerce marketplace template with modern features." },
-    { "name": "Elite Bazaar", "url": "https://3lbazaar.com/elite/", "description": "A luxurious e-commerce platform for high-end fashion, accessories, and lifestyle products." }
+    {
+      "name": "Waiter.sa",
+      "url": "https://waiter.sa",
+      "description": "A premier online food ordering and delivery platform based in Saudi Arabia."
+    },
+    {
+      "name": "Balusha Team",
+      "url": "https://balushateam.com/",
+      "description": "Corporate website for a leading contracting and construction services company."
+    },
+    {
+      "name": "Tamouh.ai",
+      "url": "https://tamouh.ai/",
+      "description": "An AI-powered platform providing advanced tools for businesses and individuals."
+    },
+    {
+      "name": "Hlayisani Group",
+      "url": "https://hlayisani.com",
+      "description": "Professional corporate website for a prominent investment holding company."
+    },
+    {
+      "name": "Boulevard Super App",
+      "url": "https://boulevardsuperapp.com/",
+      "description": "A multi-service platform offering lifestyle, convenience, and entertainment services."
+    },
+    {
+      "name": "Soft Collection",
+      "url": "https://softcollection.co.uk/",
+      "description": "Elegant e-commerce platform for a UK-based luxury home textile brand."
+    },
+    {
+      "name": "Tusk Photo",
+      "url": "https://www.tuskphoto.com/",
+      "description": "A visually stunning portfolio website for a professional photography service."
+    },
+    {
+      "name": "Palestinian Causes",
+      "url": "https://www.palestiniancauses.com/",
+      "description": "An informational hub dedicated to raising awareness for various social causes."
+    },
+    {
+      "name": "Tafaol Center",
+      "url": "https://tafaolcenter.org/",
+      "description": "Official website for an educational, developmental, and consulting center."
+    },
+    {
+      "name": "Swaeeds",
+      "url": "https://swaeeds.com",
+      "description": "An online platform connecting users with a wide range of local services and businesses."
+    },
+    {
+      "name": "Moalime",
+      "url": "https://moalime.com/",
+      "description": "An online educational platform connecting students with qualified teachers for various subjects."
+    },
+    {
+      "name": "Makani Homes",
+      "url": "https://makanihomes.com/",
+      "description": "A real estate platform for property listings, sales, and rentals in the UAE.",
+      "coverImageUrl": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Multivendor E-commerce",
+      "url": "https://personal-multivendor.netlify.app/",
+      "description": "A versatile multi-vendor e-commerce marketplace template with modern features."
+    },
+    {
+      "name": "Elite Bazaar",
+      "url": "https://3lbazaar.com/elite/",
+      "description": "A luxurious e-commerce platform for high-end fashion, accessories, and lifestyle products."
+    }
   ],
   "services": [
     {
@@ -65,13 +123,37 @@
       "description": "Advanced AI systems to automate decisions, analyze data, and enhance customer experiences.",
       "longDescription": "We design and integrate intelligent systems that turn manual work into automated workflows, saving time, reducing costs, and improving accuracy. Our solutions range from chatbots and image understanding to predictive analytics and recommendation systems.",
       "process": [
-        { "title": "Business Analysis", "description": "Understand your workflows, challenges, and goals to identify where AI can add measurable value." },
-        { "title": "Model Selection & Integration", "description": "Select and integrate suitable AI models from providers like OpenAI, Google, and Anthropic, or train custom models." },
-        { "title": "Automation Design", "description": "Connect the AI system with your existing software (CRM, website, etc.) via secure APIs for real-time insights." },
-        { "title": "Deployment & Optimization", "description": "Continuously fine-tune models and monitor performance for accuracy, scalability, and compliance." }
+        {
+          "title": "Business Analysis",
+          "description": "Understand your workflows, challenges, and goals to identify where AI can add measurable value."
+        },
+        {
+          "title": "Model Selection & Integration",
+          "description": "Select and integrate suitable AI models from providers like OpenAI, Google, and Anthropic, or train custom models."
+        },
+        {
+          "title": "Automation Design",
+          "description": "Connect the AI system with your existing software (CRM, website, etc.) via secure APIs for real-time insights."
+        },
+        {
+          "title": "Deployment & Optimization",
+          "description": "Continuously fine-tune models and monitor performance for accuracy, scalability, and compliance."
+        }
       ],
-      "capabilities": ["AI Chatbots", "Image Understanding", "Text Generation & Summarization", "Predictive Analytics", "Recommendation Systems"],
-      "technologies": ["OpenAI", "Google DeepMind", "Anthropic", "Stability AI", "LangChain"]
+      "capabilities": [
+        "AI Chatbots",
+        "Image Understanding",
+        "Text Generation & Summarization",
+        "Predictive Analytics",
+        "Recommendation Systems"
+      ],
+      "technologies": [
+        "OpenAI",
+        "Google DeepMind",
+        "Anthropic",
+        "Stability AI",
+        "LangChain"
+      ]
     },
     {
       "id": "mobile",
@@ -80,14 +162,41 @@
       "description": "High-performance, cross-platform iOS and Android applications using Flutter.",
       "longDescription": "We build fast, stable, and engaging mobile apps from a single, unified codebase. Our goal is to deliver enterprise-grade performance and modern design, strengthening your brand and generating real business results.",
       "process": [
-        { "title": "Business Discovery", "description": "Understand your business model, target users, and the problems the app should solve." },
-        { "title": "UX Research & Design", "description": "Design wireframes and interactive prototypes to map user journeys for simplicity and clarity." },
-        { "title": "Flutter App Development", "description": "Build the app using Flutter and Dart for high performance, rapid development, and consistency." },
-        { "title": "API & System Integration", "description": "Connect your app with existing systems like CRMs, e-commerce backends, and payment gateways." },
-        { "title": "Deployment & Maintenance", "description": "Handle publishing to the App Store and Google Play, and set up CI/CD pipelines." }
+        {
+          "title": "Business Discovery",
+          "description": "Understand your business model, target users, and the problems the app should solve."
+        },
+        {
+          "title": "UX Research & Design",
+          "description": "Design wireframes and interactive prototypes to map user journeys for simplicity and clarity."
+        },
+        {
+          "title": "Flutter App Development",
+          "description": "Build the app using Flutter and Dart for high performance, rapid development, and consistency."
+        },
+        {
+          "title": "API & System Integration",
+          "description": "Connect your app with existing systems like CRMs, e-commerce backends, and payment gateways."
+        },
+        {
+          "title": "Deployment & Maintenance",
+          "description": "Handle publishing to the App Store and Google Play, and set up CI/CD pipelines."
+        }
       ],
-      "capabilities": ["Cross-Platform Development", "AI-Enhanced Features", "Payment & E-Commerce Systems", "Offline Mode & Data Sync", "Custom Admin Dashboards"],
-      "technologies": ["Flutter / Dart", "Firebase / Firestore", "Node.js / Python", "AWS / Google Cloud", "Stripe / PayPal"]
+      "capabilities": [
+        "Cross-Platform Development",
+        "AI-Enhanced Features",
+        "Payment & E-Commerce Systems",
+        "Offline Mode & Data Sync",
+        "Custom Admin Dashboards"
+      ],
+      "technologies": [
+        "Flutter / Dart",
+        "Firebase / Firestore",
+        "Node.js / Python",
+        "AWS / Google Cloud",
+        "Stripe / PayPal"
+      ]
     },
     {
       "id": "web",
@@ -96,14 +205,41 @@
       "description": "Modern, secure, and scalable web applications that serve as the digital backbone of your business.",
       "longDescription": "We engineer systems that streamline operations, automate workflows, and enhance user experience from end to end. From custom web platforms and e-commerce systems to admin dashboards, we build reliable solutions with robust security and performance.",
       "process": [
-        { "title": "Business & System Analysis", "description": "Deeply analyze your organization to map how internal processes can be optimized." },
-        { "title": "Architecture & UI/UX Design", "description": "Define the system architecture, databases, and user experience for functionality and clarity." },
-        { "title": "Web Development & Integration", "description": "Build using reliable frameworks, combining clean code with robust security and seamless integration." },
-        { "title": "Testing & Quality Assurance", "description": "Run deep functional, performance, and security tests to ensure flawless performance." },
-        { "title": "Deployment & Optimization", "description": "Deploy on secure cloud environments (AWS, Azure, GCP) with CI/CD pipelines." }
+        {
+          "title": "Business & System Analysis",
+          "description": "Deeply analyze your organization to map how internal processes can be optimized."
+        },
+        {
+          "title": "Architecture & UI/UX Design",
+          "description": "Define the system architecture, databases, and user experience for functionality and clarity."
+        },
+        {
+          "title": "Web Development & Integration",
+          "description": "Build using reliable frameworks, combining clean code with robust security and seamless integration."
+        },
+        {
+          "title": "Testing & Quality Assurance",
+          "description": "Run deep functional, performance, and security tests to ensure flawless performance."
+        },
+        {
+          "title": "Deployment & Optimization",
+          "description": "Deploy on secure cloud environments (AWS, Azure, GCP) with CI/CD pipelines."
+        }
       ],
-      "capabilities": ["Custom Web Platforms", "E-Commerce Systems", "Admin Dashboards", "AI-Powered Enhancements", "Secure APIs & Integrations"],
-      "technologies": ["React / Next.js", "Node.js / Python / PHP Laravel", "PostgreSQL / MongoDB", "Docker / Kubernetes", "AWS / Google Cloud"]
+      "capabilities": [
+        "Custom Web Platforms",
+        "E-Commerce Systems",
+        "Admin Dashboards",
+        "AI-Powered Enhancements",
+        "Secure APIs & Integrations"
+      ],
+      "technologies": [
+        "React / Next.js",
+        "Node.js / Python / PHP Laravel",
+        "PostgreSQL / MongoDB",
+        "Docker / Kubernetes",
+        "AWS / Google Cloud"
+      ]
     },
     {
       "id": "uiux",
@@ -112,14 +248,41 @@
       "description": "Designing systems and interfaces that turn complexity into clarity and work beautifully.",
       "longDescription": "Our approach connects technical structure with human experience, ensuring every process, screen, and interaction is functional, intuitive, and aligned with your business goals. We merge creativity with logic to deliver flawless digital experiences.",
       "process": [
-        { "title": "Research & Discovery", "description": "Analyze users, business objectives, and workflow pain points to understand what users truly need." },
-        { "title": "Information Architecture", "description": "Structure your system into logical flows and hierarchies for easy navigation." },
-        { "title": "Wireframing & Prototyping", "description": "Design low- and high-fidelity prototypes to visualize the system and refine usability." },
-        { "title": "UI Design & Branding Alignment", "description": "Craft aesthetic and purposeful visual interfaces that reflect your brand identity." },
-        { "title": "Usability Testing & Refinement", "description": "Test with real users to observe behavior and iterate until the interface feels effortless." }
+        {
+          "title": "Research & Discovery",
+          "description": "Analyze users, business objectives, and workflow pain points to understand what users truly need."
+        },
+        {
+          "title": "Information Architecture",
+          "description": "Structure your system into logical flows and hierarchies for easy navigation."
+        },
+        {
+          "title": "Wireframing & Prototyping",
+          "description": "Design low- and high-fidelity prototypes to visualize the system and refine usability."
+        },
+        {
+          "title": "UI Design & Branding Alignment",
+          "description": "Craft aesthetic and purposeful visual interfaces that reflect your brand identity."
+        },
+        {
+          "title": "Usability Testing & Refinement",
+          "description": "Test with real users to observe behavior and iterate until the interface feels effortless."
+        }
       ],
-      "capabilities": ["System Architecture Design", "User Interface (UI) Design", "User Experience (UX) Strategy", "Interactive Prototypes", "Design Systems & Style Guides"],
-      "technologies": ["Figma / Adobe XD", "Miro / Whimsical", "Zeplin / Avocode", "Notion / Jira", "Hotjar / Google Analytics"]
+      "capabilities": [
+        "System Architecture Design",
+        "User Interface (UI) Design",
+        "User Experience (UX) Strategy",
+        "Interactive Prototypes",
+        "Design Systems & Style Guides"
+      ],
+      "technologies": [
+        "Figma / Adobe XD",
+        "Miro / Whimsical",
+        "Zeplin / Avocode",
+        "Notion / Jira",
+        "Hotjar / Google Analytics"
+      ]
     },
     {
       "id": "devops",
@@ -128,14 +291,41 @@
       "description": "Building a reliable, fast, and secure foundation for your digital ecosystem.",
       "longDescription": "Our DevOps services close the gap between development and operations, enabling continuous delivery, scalability, and resilience at every stage of your product's lifecycle. We transform your software delivery from reactive to proactive, and from manual to automated.",
       "process": [
-        { "title": "Infrastructure Assessment", "description": "Analyze your current infrastructure, deployment methods, and bottlenecks to identify improvements." },
-        { "title": "CI/CD Pipeline Design", "description": "Create CI/CD pipelines that automate code testing, builds, and releases for faster delivery." },
-        { "title": "Cloud & Container Setup", "description": "Deploy applications using Docker and Kubernetes for portability and scalability on AWS, Azure, or GCP." },
-        { "title": "Monitoring & Security", "description": "Implement real-time monitoring, logging, alerting, automated backups, and vulnerability scanning." },
-        { "title": "Continuous Optimization", "description": "Continuously refine performance, scalability, and cost efficiency through data-driven adjustments." }
+        {
+          "title": "Infrastructure Assessment",
+          "description": "Analyze your current infrastructure, deployment methods, and bottlenecks to identify improvements."
+        },
+        {
+          "title": "CI/CD Pipeline Design",
+          "description": "Create CI/CD pipelines that automate code testing, builds, and releases for faster delivery."
+        },
+        {
+          "title": "Cloud & Container Setup",
+          "description": "Deploy applications using Docker and Kubernetes for portability and scalability on AWS, Azure, or GCP."
+        },
+        {
+          "title": "Monitoring & Security",
+          "description": "Implement real-time monitoring, logging, alerting, automated backups, and vulnerability scanning."
+        },
+        {
+          "title": "Continuous Optimization",
+          "description": "Continuously refine performance, scalability, and cost efficiency through data-driven adjustments."
+        }
       ],
-      "capabilities": ["CI/CD Automation", "Cloud Infrastructure Management", "Containerization & Orchestration", "Monitoring & Alerting", "Backup & Disaster Recovery"],
-      "technologies": ["Docker / Kubernetes", "AWS / Azure / Google Cloud", "GitLab CI / Jenkins", "Terraform / Ansible", "Prometheus / Grafana"]
+      "capabilities": [
+        "CI/CD Automation",
+        "Cloud Infrastructure Management",
+        "Containerization & Orchestration",
+        "Monitoring & Alerting",
+        "Backup & Disaster Recovery"
+      ],
+      "technologies": [
+        "Docker / Kubernetes",
+        "AWS / Azure / Google Cloud",
+        "GitLab CI / Jenkins",
+        "Terraform / Ansible",
+        "Prometheus / Grafana"
+      ]
     }
   ],
   "team_members": [
