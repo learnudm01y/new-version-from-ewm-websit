@@ -29,6 +29,8 @@ export interface Technology {
 export interface TechnologyCategory {
   titleKey: string;
   technologies: Technology[];
+  // Optional list of API models supported / integrated (e.g. GPT, Claude, Gemini families)
+  models?: string[];
 }
 
 export interface Project {
@@ -88,6 +90,8 @@ export interface Translations {
   tech_category_backend: string;
   tech_category_database: string;
   tech_category_ai_automation: string;
+  // Label used in the AI card to show supported models
+  ai_models_label: string;
   tech_category_devops_cloud: string;
   tech_category_design_tools: string;
 }
