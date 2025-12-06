@@ -34,7 +34,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     const fetchTranslations = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch(`/locales/${language}.json`);
+        const response = await fetch(`${import.meta.env.BASE_URL}locales/${language}.json`);
         if (!response.ok) {
           throw new Error(`Could not load ${language}.json`);
         }
@@ -45,7 +45,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         // Fallback to English if the requested language file fails to load
         if (language !== 'en') {
           try {
-            const response = await fetch(`/locales/en.json`);
+            const response = await fetch(`${import.meta.env.BASE_URL}locales/en.json`);
             const data = await response.json();
             setTranslations(data);
           } catch (fallbackError) {
